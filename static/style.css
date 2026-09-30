@@ -1,0 +1,192 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    color: #222;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 30px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.workspace {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.panel,
+.result {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.panel h2,
+.result h2 {
+    margin-top: 0;
+}
+
+canvas {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border: 2px solid #333;
+    border-radius: 8px;
+    background: white;
+    cursor: crosshair;
+    touch-action: none;
+}
+
+.buttons {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+button {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: #222;
+    color: white;
+    font-size: 15px;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+input[type="file"] {
+    margin: 20px 0;
+    display: block;
+}
+
+.result {
+    margin-top: 25px;
+}
+
+#resultArea {
+    text-align: center;
+    min-height: 100px;
+}
+
+#resultArea img {
+    max-width: 500px;
+    width: 100%;
+    border: 2px solid #333;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+@media (max-width: 800px) {
+
+    .workspace {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+}
+.download-btn {
+    margin-top: 15px;
+    background: #222;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.download-btn:hover {
+    opacity: 0.8;
+}
+
+.comparison {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.image-card {
+    background: #f8f8f8;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.image-card h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.image-card img {
+    width: 100%;
+    max-width: 450px;
+    border: 2px solid #333;
+    border-radius: 8px;
+    background: white;
+}
+
+.download-btn {
+    margin-top: 15px;
+    background: #222;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.download-btn:hover {
+    opacity: 0.8;
+}
+
+@media (max-width: 800px) {
+
+    .comparison {
+        grid-template-columns: 1fr;
+    }
+
+}
+.ai-btn {
+    margin-top: 12px;
+    background: #222;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.ai-btn:hover {
+    opacity: 0.8;
+}

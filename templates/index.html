@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Sketch → AI Image</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>🎨 Sketch → AI Image</h1>
+
+        <p class="subtitle">
+            Draw your idea or upload a sketch
+        </p>
+
+
+        <div class="workspace">
+
+            <!-- DRAWING PANEL -->
+
+            <div class="panel">
+
+                <h2>✏️ Draw Sketch</h2>
+
+                <canvas
+                    id="canvas"
+                    width="500"
+                    height="400">
+                </canvas>
+
+                <div class="buttons">
+
+                    <button id="clearBtn">
+                        🗑️ Clear
+                    </button>
+
+                    <button id="processCanvasBtn">
+                        ⚙️ Process Sketch
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- UPLOAD PANEL -->
+
+            <div class="panel">
+
+                <h2>📤 Upload Sketch</h2>
+
+                <input
+                    type="file"
+                    id="imageInput"
+                    accept=".png,.jpg,.jpeg">
+
+                <button id="uploadBtn">
+                    🚀 Upload & Process
+                </button>
+
+                <div id="uploadedPreview"></div>
+
+            </div>
+
+        </div>
+
+
+        <!-- RESULT -->
+
+        <div class="result">
+
+    <h2>🖼️ Sketch Comparison</h2>
+
+    <div id="statusMessage">
+        <p>Your processed sketch will appear here.</p>
+    </div>
+
+    <div class="comparison">
+
+        <!-- Original Sketch -->
+
+        <div class="image-card">
+
+            <h3>Original Sketch</h3>
+
+            <div id="originalPreview">
+                <p>No sketch processed yet.</p>
+            </div>
+
+        </div>
+
+
+        <!-- Processed Sketch -->
+
+        <div class="image-card">
+
+            <h3>OpenCV Processed</h3>
+
+            <div id="processedPreview">
+                <p>No processed image yet.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+    <script src="{{ url_for('static', filename='script.js') }}">
+    </script>
+
+</body>
+
+</html>
